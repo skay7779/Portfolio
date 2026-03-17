@@ -1,21 +1,20 @@
 # Portfolio Analysis Tool
 
 ## Overview
-Briefly explain what this project does in 2–3 lines.
-Example:  
-This project analyses a stock portfolio, calculates valuation metrics (DCF, PV per share), and performs sensitivity analysis to evaluate different growth and discount rate scenarios.
+
+This project builds a discounted cash flow (DCF) model in Python to estimateintrinsic value per share and evaluate sensitivity to key assumptions such as growth rate and discount rate. It is designed to replicate real-world equity valuation workflows while remaining flexible for experimentation and extension.
 
 ## Features
 - Portfolio valuation (DCF)
 - Sensitivity analysis tables
-- Data handling with Python
-- (Add anything else you’ve built)
+- Data handling and financial modelling with Python
+- Risk commentary and research reports
 
 ## Tech Stack
 - Python
 - Pandas / NumPy
-- Excel (if used)
-- (Anything else)
+- Excel
+- Word
 
 ## How to Run
 1. Clone the repo:
@@ -36,12 +35,16 @@ This project analyses a stock portfolio, calculates valuation metrics (DCF, PV p
    ```
 
 ## Example Output
-Explain what the output looks like (tables, graphs, etc).
+Sensitivity Table (PV per Share)            
+Growth Rate/ Discount Rate    6%    7%    8
+4%    14.13    12.50    11.00
+5%    27.28    21.00    18.33
+6%    27.53    22.00    19.50
 
 ## What I Learned
 - Building financial models in Python
 - Handling real-world data
-- (This part actually matters more than you think)
+- Empirical application of theoretical ideas
 
 ## Future Improvements
 - Add UI (Streamlit or web app)
