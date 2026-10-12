@@ -1,53 +1,34 @@
-# Portfolio Analysis Tool
+# Portfolio Analysis & Equity Research
 
-## Overview
+A self-directed project combining Python, SQL and Excel to analyse a five-asset portfolio and value individual companies.
 
-This project builds a discounted cash flow (DCF) model in Python to estimateintrinsic value per share and evaluate sensitivity to key assumptions such as growth rate and discount rate. It is designed to replicate real-world equity valuation workflows while remaining flexible for experimentation and extension.
+## What's inside
 
-## Features
-- Portfolio valuation (DCF)
-- Sensitivity analysis tables
-- Data handling and financial modelling with Python
-- Risk commentary and research reports
+| File | What it shows |
+|---|---|
+| `Portfolio 1.ipynb` / `Portfolio 2.pdf` | Python + SQLite pipeline pulling daily prices (2018–2026) for Apple, JPMorgan, BP, Unilever and an S&P 500 ETF via `yfinance`, then measuring portfolio risk: annualised return and volatility, Sharpe ratio, 1-day 95% Value at Risk, correlation matrix, rolling volatility and each asset's contribution to total risk. |
+| `Portfolio Risk and Exposure.xlsx` | Asset-class, sector and geographic exposure of a simulated £25,000 portfolio. |
+| `Risk commentary.docx` | Weekly risk commentary written during a five-week portfolio simulation, covering concentration, sector and macro risk (including the 2026 Middle East oil shock). |
+| `DCF for BP.xlsx` / `BP DCF Analysis report.docx` | Free cash flow DCF valuation of BP plc with a WACC vs terminal-growth sensitivity table. |
+| `Equity Research Note - BP.L.docx` | Equity research note on BP: business overview, financials, P/E comparison with Shell, risks, catalysts and a Hold recommendation. |
+| `DCF for AAPL and Sensitivity Analysis.xlsx` | Dividend discount model for Apple, with a sensitivity table and a note on why a DDM undervalues a company that returns cash mainly through buybacks. |
+| `Regulatory Compliance Case Study.docx` | Case study of Barclays' LIBOR manipulation: what happened, regulations breached and consequences. |
 
-## Tech Stack
-- Python
-- Pandas / NumPy
-- Excel
-- Word
+## Key results (portfolio notebook)
 
-## How to Run
-1. Clone the repo:
-   ```bash
-   git clone https://github.com/skay7779/Portfolio.git
-   ```
-2. Navigate into the folder:
-   ```bash
-   cd Portfolio
-   ```
-3. Install dependencies:
-   ```bash
-   pip install -r requirements.txt
-   ```
-4. Run the script:
-   ```bash
-   python main.py
-   ```
+- Annualised return: 13.4% · annualised volatility: 16.6% · Sharpe ratio: 0.81 (risk-free rate assumed 0%)
+- 1-day 95% Value at Risk: 1.7% of portfolio value
+- BP DCF: implied value of about £9.24 per share vs a market price of about £5.42 (Sept 2026); around 74% of enterprise value comes from the terminal value
 
-## Example Output
-Sensitivity Table (PV per Share)            
-Growth Rate/ Discount Rate    6%    7%    8
-4%    14.13    12.50    11.00
-5%    27.28    21.00    18.33
-6%    27.53    22.00    19.50
+## Running the notebook
 
-## What I Learned
-- Building financial models in Python
-- Handling real-world data
-- Empirical application of theoretical ideas
+```
+pip install -r requirements.txt
+jupyter notebook "Portfolio 1.ipynb"
+```
 
-## Future Improvements
-- Add UI (Streamlit or web app)
-- Automate data fetching (APIs)
-- Improve model assumptions
+Then use **Kernel → Restart & Run All**. Price data is downloaded from Yahoo Finance via `yfinance`.
 
+## Skills demonstrated
+
+Python (pandas, NumPy, matplotlib, seaborn), SQL (SQLite), Excel financial modelling, DCF and dividend discount valuation, portfolio risk metrics, equity research writing.
